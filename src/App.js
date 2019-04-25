@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import firebase from 'firebase';
 import { FirebaseAuth } from 'react-firebaseui';
-import ENV from './env';
 
 import Messages from './components/Messages';
 import Form from './components/Form';
@@ -9,12 +8,12 @@ import Form from './components/Form';
 import './App.css';
 
 const config = {
-  apiKey: process.env.FIREBASE_API_KEY ||  ENV.FIREBASE_API_KEY,
-  authDomain: process.env.FIREBASE_API_KEY || ENV.FIREBASE_API_KEY,
-  databaseURL: process.env.FIREBASE_DATABASE_URL || ENV.FIREBASE_DATABASE_URL,
-  projectId: process.env.FIREBASE_PROJECT_ID || ENV.FIREBASE_PROJECT_ID,
-  storageBucket: process.env.FIREBASE_STORAGE_BUCKET || ENV.FIREBASE_STORAGE_BUCKET,
-  messagingSenderId: process.env.FIREBASE_MESSAGING_SENDER_ID || ENV.FIREBASE_MESSAGING_SENDER_ID,
+  apiKey: process.env.FIREBASE_API_KEY,
+  authDomain: process.env.FIREBASE_API_KEY,
+  databaseURL: process.env.FIREBASE_DATABASE_URL,
+  projectId: process.env.FIREBASE_PROJECT_ID,
+  storageBucket: process.env.FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: process.env.FIREBASE_MESSAGING_SENDER_ID,
 };
 
 firebase.initializeApp(config);
