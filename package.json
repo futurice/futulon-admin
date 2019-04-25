@@ -2,6 +2,9 @@
   "name": "futulon-admin",
   "version": "0.1.0",
   "private": true,
+  "engines": {
+    "node": "8.9.1"
+  },
   "dependencies": {
     "firebase": "^4.8.2",
     "lodash": "^4.17.4",
