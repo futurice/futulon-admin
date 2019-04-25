@@ -80,12 +80,12 @@ class App extends Component {
         postData.picture = downloadURL;
       }
 
-      const baseUrl = `https://cors-anywhere.herokuapp.com/${process.env.FUNCTIONS_URL}`;
+      const baseUrl = `https://cors-anywhere.herokuapp.com/${process.env.REACT_APP_FUNCTIONS_URL}`;
       const functionUrl = queryParametrize(`${baseUrl}/createNotificationItem`, postData);
 
       var myHeaders = new Headers();
       myHeaders.append('Content-Type', 'application/json');
-      myHeaders.append('FUNCTION_SECRET_KEY', process.env.FUNCTION_SECRET_KEY);
+      myHeaders.append('FUNCTION_SECRET_KEY', process.env.REACT_APP_FUNCTION_SECRET_KEY);
 
       return fetch(functionUrl, {
         method: 'GET',
